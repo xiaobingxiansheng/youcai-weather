@@ -1,0 +1,25 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "@babel/runtime": "^7.1.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.6",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1",
+    "gulp-util": "^3.0.8"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

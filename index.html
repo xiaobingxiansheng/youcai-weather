@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link href="css/weather.css" rel="stylesheet" type="text/css" />
+    <link href="css/swiper.min.css" rel="stylesheet" type="text/css" />
+    <title>天气预报</title>
+</head>
+
+<body>
+    <div class="all">
+        <div class="weather-head">
+            <span class="aqi"></span>
+            <!-- <canvas id="canvas"></canvas> -->
+            <span class="city"></span>
+            <div class="weather-information">
+                <span class="degrees"></span>
+                <div class="atmosphere">
+                    <span class="wInformation"></span>
+                </div>
+                <div class="direction">
+                    <!-- <span class="fengli"></span> -->
+                    <span class="shidu"></span>
+                    <span class="fengxiang"></span>
+                </div>
+                <div class="tips"></div>
+            </div>
+        </div>
+        <div class="lately">
+            <span class="today">
+                <div class="today-common today-top">
+                    <span class="today-content">今天</span>
+                    <span class="today-degrees"></span>
+                </div>
+                <div class="today-common today-bottom">
+                    <span class="today-cloudy"></span>
+                    <span class="today-img weather-img"></span>
+                </div>
+            </span>
+            <span class="tomorrow">
+                <div class="tomorrow-common tomorrow-top">
+                    <span class="tomorrow-content">明天</span>
+                    <span class="tomorrow-degrees"></span>
+                </div>
+                <div class="tomorrow-common tomorrow-bottom">
+                    <span class="tomorrow-cloudy"></span>
+                    <span class="tomorrow-img weather-img"></span>
+                </div>
+            </span>
+        </div>
+        <div class="placeholderDiv"></div>
+        <div class="weather-sevday">
+            <p class="weather-sevday-title">
+                近期预报
+            </p>
+            <div class="weather-sevday-wrap">
+                <div class="weather-sevday-scroll">
+                    <div id="weather-sevday-line">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="placeholderDiv"></div>
+        <div class="life-index">
+            <p class="life-title">
+                生活指数
+            </p>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide-one"></div>
+                    <div class="swiper-slide slide-two"></div>
+                </div>
+                <!-- 如果需要滚动条 -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
+        <div class="placeholderDiv" style="height:150px;text-align: center;padding-top: 25px;color:#666">
+            数据来源于中国天气网
+        </div>
+
+    </div>
+    <div class="MaskLayer">
+        <div class="prop">
+            <span class="prop-title">晨练指数(舒适)</span>
+            <div class="prop-content">天气不错，空气清新，是您晨练的大好时机，建议不同年龄段的人们积极参加户外健身活动。</div>
+        </div>
+        <div class="test">
+        </div>
+    </div>
+    <div class="absoluteAlert">
+        <img class="alertImg" src="img/logo.jpg" />
+        <span class="open">立即打开</span>
+    </div>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+    <script src="dist/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.3/bluebird.core.min.js"></script>
+    <script src="dist/main.js"></script>
+    <script src="dist/weatherIcon.js"></script>
+    <script src="dist/echarts-tempture.js"></script>
+    <script src="dist/swiper.min.js"></script>
+    <script src="dist/index.js"></script>
+
+</body>
+
+</html>

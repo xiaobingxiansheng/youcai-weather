@@ -1,0 +1,443 @@
+.all {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.weather-head {
+    width: 100%;
+    height: 450px;
+    /* background: linear-gradient(135deg, #80ecf7 -20%, #706aff 120%); */
+    /* background-image:url("../img/02.jpg"); */
+    background: url("../img/04.jpg") no-repeat;
+    color: #fff;
+    position: relative;
+    /* box-shadow:inset 0 -8px 10px white; */
+}
+
+.city {
+    display: block;
+    width: 200px;
+    font-size: 18px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.degrees {
+    font-size: 70px;
+}
+
+.weather-information {
+    margin: 0 auto;
+    width: 175px;
+    text-align: center;
+}
+
+.atmosphere span,
+.direction span {
+    font-size: 18px;
+}
+
+.atmosphere,
+.direction {
+    margin-top: 20px
+}
+
+.tips {
+    margin-top: 50px;
+    font-size: 14px;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    position: absolute;
+}
+
+.aqi {
+    display: none;
+    background: #23b286;
+    padding: 5px;
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    border-radius: 5px;
+}
+
+.shidu {
+    font-size: 15px !important;
+    float: left;
+}
+
+.fengxiang {
+    font-size: 15px !important;
+    float: right;
+}
+
+#canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.zzc {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background: #FFF;
+    opacity: 0.7;
+    top: 50px;
+}
+
+#weather-sevday-line {
+    width: 160%;
+    height: 200px;
+    /* max-height:300px; */
+    position: absolute;
+    top: 120px;
+}
+
+.weather-sevday-title,
+.life-title {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 0 10px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.weather-sevday-wrap {
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.weather-sevday-scroll {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.weather-sevday-item {
+    width: 20%;
+    text-align: center;
+}
+
+.weather-morn-date {
+    margin: 10px 0;
+    color: #979696;
+}
+
+.weather-morn-dateTime {
+    margin: 6px 0;
+    font-size: 0.9rem;
+    color: #838383;
+}
+
+.weather-light-windDir,
+.weather-light-windlev {
+    font-size: 0.9rem;
+    margin: 5px 0;
+    color: #838383;
+}
+
+.weather-light-info {
+    font-size: 0.9rem;
+    margin: 5px 0;
+    color: #838383;
+}
+
+.weather-dot:before {
+    content: '';
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+
+.weather-dot-green:before {
+    background-color: green;
+}
+
+.weather-morn-state {
+    margin: 15px 0;
+    color: #756c6c;
+}
+
+.weather-light-state {
+    margin: 15px 0;
+    color: #756c6c;
+}
+
+.weather-img {
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+}
+
+.weather-sevday-night {
+    margin-top: 200px;
+}
+
+/* 占位符 */
+.placeholderDiv {
+    width: 100%;
+    height: 15px;
+    background: #f7f7f7;
+}
+
+/* 生活指数 */
+.swiper-container {
+    width: 100%;
+    height: 300px;
+}
+
+.swiper-slide {
+    font-size: 0;
+    position: relative;
+}
+
+.slide-content {
+    /* display: inline-block; */
+    display: inline-flex;
+    float: left;
+    text-align: center;
+    justify-content: center;
+    width: 25%;
+    height: 130px;
+    margin-left: -0.5px;
+    border-right: 0.5px solid #e4e4e4;
+    border-bottom: 0.5px solid #e4e4e4;
+    font-size: 1rem;
+    margin-left: -1px
+}
+
+.slide-img {
+    width: 30px;
+}
+
+.content-information {
+    width: 100px;
+    margin: auto;
+}
+
+.content-information p {
+    margin-top: 5px;
+}
+
+.content-information p:nth-child(3) {
+    color: #838383;
+}
+
+/* 遮罩层 */
+.prop {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    display: none;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 150px;
+    background: #fff;
+    border-radius: 15px;
+    z-index: 3;
+}
+
+.prop span {
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.prop-content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.test {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* opacity: 0.4;
+    background-color: #000; */
+}
+
+/* 今明两天 */
+.lately {
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    font-size: 1.1rem;
+}
+
+.today {
+    width: 49%;
+    height: 80px;
+    float: left;
+    margin-top: 10px;
+    border-right: 1px solid #ddd;
+}
+
+.today-common,
+.tomorrow-common {
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.today-degrees,
+.today-img,
+.tomorrow-degrees,
+.tomorrow-img {
+    float: right;
+    margin-right: 15px;
+}
+
+.tomorrow {
+    width: 49%;
+    height: 80px;
+    float: right;
+    margin-top: 10px;
+}
+
+.MaskLayer {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.absoluteAlert {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+    /* background: url(../img/logo.jpg) no-repeat; */
+    background: #fff;
+    border-top: 1px solid #ddd
+}
+
+.alertImg {
+    position: absolute;
+    width: 230px;
+}
+
+.open {
+    position: absolute;
+    right: 20px;
+    border: 1px solid #e64c4c;
+    padding: 15px 20px;
+    border-radius: 5px;
+    color: #e64c4c;
+    top: 25px;
+}
+
+.open a {
+    text-decoration: none;
+    color: #e64c4c;
+}
+
+/* 媒体查询 */
+@media screen and (max-width: 500px) {
+    .lately {
+        font-size: 1rem;
+    }
+
+    .weather-sevday-title,
+    .life-title {
+        font-size: 15px;
+    }
+
+    .slide-content {
+        font-size: 0.9rem;
+    }
+
+    .weather-sevday-wrap {
+        padding-top: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .weather-head {
+        height: 420px;
+    }
+
+    .lately {
+        font-size: 0.9rem;
+        height: 90px;
+    }
+
+    .today,
+    .tomorrow {
+        margin-top: 5px;
+    }
+
+    .weather-sevday {
+        font-size: 0.9rem;
+    }
+
+    .weather-sevday-wrap {
+        padding-top: 0px;
+        padding-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .weather-head {
+        height: 400px;
+    }
+
+    .weather-sevday {
+        font-size: 0.8rem;
+    }
+
+    .slide-content {
+        font-size: 0.8rem;
+    }
+
+    .weather-light-windDir,
+    .weather-light-windlev {
+        font-size: 0.8rem;
+    }
+
+    .absoluteAlert {
+        height: 70px;
+    }
+
+    .alertImg {
+        width: 160px;
+    }
+
+    .open {
+        padding: 10px 15px;
+        top: 15px;
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+    .slide-content {
+        height: 110px;
+    }
+
+    .swiper-container {
+        height: 230px;
+    }
+}

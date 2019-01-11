@@ -1,0 +1,47 @@
+.weather-head{
+    width: 100%;
+    height:450px;
+	/* background: linear-gradient(135deg, #80ecf7 -20%, #706aff 120%); */
+	/* background-image:url("../img/02.jpg"); */
+	background:url("../img/1.png") no-repeat;
+	color:#fff;
+	position: relative;
+}
+.city{
+    display: block;
+    width: 200px;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+.degrees{
+    font-size:6rem;
+}
+.weather-information{
+    margin: 0 auto;
+    width: 250px;
+    text-align: center;
+}
+.atmosphere span,.direction span{
+    font-size:1.3rem;
+	margin-left:15px;
+}
+.atmosphere,.direction{
+    margin-top: 20px
+}
+
+#canvas{
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+.zzc{
+	position:absolute;
+	width:100%;
+	height:200px;
+	background:#FFF;
+	opacity:0.7;
+	top:50px;
+}
